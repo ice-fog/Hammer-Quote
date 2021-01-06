@@ -1,0 +1,41 @@
+Для получения всех категорий отправьте GET-запрос по адресу /api/category
+
+Ответ
+
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data>
+    <id>{id категории}</id>
+    <count>{id категории}</count>
+    <parent>{id родительской категории}</parent>
+    <name>{название категории}</name>
+  </data>
+</root>
+
+
+Для получения записей отправьте GET-запрос по адресу  /api/content/{id категории}/{номер страницы}
+
+Ответ
+
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data>
+    <id>{id записи}</id>
+    <rating>{рейтинг записи}</rating>
+    <content>{запись}<content>
+    <category>{id категории}</category>
+  </data>
+</root>
+
+Для получения случайной записи  отправьте GET-запрос по адресу /api/random
+
+Ответ
+
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data>
+    <id>{id записи}</id>
+    <content>{запись}</content>
+    <rating>{рейтинг записи}</rating>
+  </data>
+</root>
